@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="year">year</label><br>
+  <input type="number" id="year" name="year"><br><br>
+  <label for="rating">rating</label><br>
+  <input type="number" id="rating" name="rating"><br><br>
+  <input type="submit" value="Submit">
+</form>
+{% endblock content %}

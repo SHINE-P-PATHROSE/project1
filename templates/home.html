@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>movie Table</h1>
+<table border="solid">
+    <thead>
+        <th>Movie Name</th>
+        <th>Year</th>
+        <th>Rating</th>
+        <th>Edit/Delete</th>
+  </thead>
+  <tbody>
+  {% for movie in obj %}
+  <tr>
+  <td><h1>{{ movie.name| upper}}</h1></td>
+  <td><h1>{{ movie.year }}</h1></td>
+  <td><h1>{{ movie.rating }}</h1></td>
+      <td><a href="{% url 'edit' movie.id %}">Edit</a>/<a href="{% url 'delete' movie.id %}">Delete</a></td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</body>
+</html>
+
